@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseURL =  environment.apiUrl + 'auth/';
+  private baseURL = environment.apiUrl + 'auth/';
   private jwtHelper = new JwtHelperService();
   decodedToken: any;
   currentUser: User;
@@ -32,9 +32,7 @@ export class AuthService {
           localStorage.setItem('user', JSON.stringify(user.user));
           this.decodedToken = this.jwtHelper.decodeToken(user.token);
           this.currentUser = user.user;
-          if (user.photoUrl) {
-            this.changeMemberPhoto(this.currentUser.photoUrl);
-          }
+          this.changeMemberPhoto(this.currentUser.photoUrl);
         }
       })
     );
