@@ -6,7 +6,8 @@ import {
   BsDropdownModule,
   TabsModule,
   BsDatepickerModule,
-  PaginationModule
+  PaginationModule,
+  ButtonsModule
 } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -73,7 +74,8 @@ export function tokenGetter() {
     FileUploadModule,
     ReactiveFormsModule,
     BsDatepickerModule.forRoot(),
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    ButtonsModule.forRoot()
   ],
   providers: [
     AuthService,
