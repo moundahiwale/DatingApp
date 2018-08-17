@@ -38,3 +38,5 @@ msbuild.wrn
 
 # Sqlite Database
 *.db
+
+wwwroot
